@@ -1,11 +1,11 @@
 package IntroPOO;
 
-import java.util.Scanner;
+
 
 public class Introducao {
 
 	public static void main(String[] args) {
-		Scanner ler = new Scanner(System.in);
+		
 		
 		Caneta bic = new Caneta("verde", 0.4);
 		Caneta faber = new Caneta("amarelo",0.6);
@@ -13,7 +13,9 @@ public class Introducao {
 		
 		//bic
 		System.out.println("\nDados da caneta Bic");
-		bic.estado();
+		//bic.tampada=false;
+		bic.setCarga(666);
+		System.out.println("Carga: "+bic.getCarga()+"%");
 		
 		//faber
 		System.out.println("\nDados da caneta faber");
@@ -22,6 +24,6 @@ public class Introducao {
 		//kilom
 		System.out.println("\nDados da caneta kilom");
 		kilom.estado();
-		ler.close();
+	
 	}
 }

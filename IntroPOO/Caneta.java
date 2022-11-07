@@ -2,10 +2,10 @@ package IntroPOO;
 
 public class Caneta {
 	//ATRIBUTOS
-	public String cor;
-	public double ponta;
-	public int carga;
-	public boolean tampada;
+	private String cor;
+	private double ponta;
+	private int carga;
+	private boolean tampada;
 	
 	//METODO CONSTRUTOR
 	
@@ -43,6 +43,22 @@ public class Caneta {
 		System.out.println("Esta tampada? "+this.tampada);
 		System.out.println("A carga atual e "+this.carga+"%");
 	}
+
+	//METODOS ACESSORES E MODIFICADORES
+	public int getCarga() {
+		return carga;
+	}
+
+	public void setCarga(int carga) {
+		if(carga<0)
+			this.carga=0;
+		else if(carga>100)
+			this.carga=100;
+		else
+			this.carga = carga;
+	}
+	
+	
 	
 	
 	
